@@ -54,17 +54,17 @@ export const MemeContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  background-image = ${props => props.backgroundImage};
+  background-image: url(${props => props.backgroundImage});
   background-size: cover;
   height: 300px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 50px;
 
-  @media screen and (min-width: 768px){
-      width: 48%;
-      margin-top: 5px;
-      margin-bottom:20px;
+  @media screen and (min-width: 768px) {
+    width: 48%;
+    margin-top: 5px;
+    margin-bottom: 20px;
   }
 `
 export const TextContent = styled.p`
@@ -77,7 +77,6 @@ export const MemeGeneratorForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
 
   @media screen and (min-width: 768px) {
     width: 40%;
