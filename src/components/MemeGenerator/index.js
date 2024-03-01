@@ -100,7 +100,9 @@ class MemeGenerator extends Component {
 
     return (
       <MemeGeneratorForm onSubmit={this.onGenerateMeme}>
-        <CustomLabel htmlFor="backgroundImgUrl">Image URL</CustomLabel>
+        <CustomLabel htmlFor="backgroundImgUrl" data-testid="meme">
+          Image URL
+        </CustomLabel>
         <CustomInput
           type="text"
           id="backgroundImgUrl"
@@ -138,7 +140,7 @@ class MemeGenerator extends Component {
             </CustomOption>
           ))}
         </CustomSelect>
-        <GenerateButton type="button">Generate</GenerateButton>
+        <GenerateButton type="submit">Generate</GenerateButton>
       </MemeGeneratorForm>
     )
   }
@@ -146,7 +148,7 @@ class MemeGenerator extends Component {
   renderMeme = () => {
     const {backgroundImgUrl, topText, bottomText, activeFontSizeId} = this.state
     return (
-      <MemeContainer backgroundImage={backgroundImgUrl} data-testid="meme">
+      <MemeContainer backgroundImage={backgroundImgUrl}>
         <TextContent activeFontSizeId={activeFontSizeId}>{topText}</TextContent>
         <TextContent activeFontSizeId={activeFontSizeId}>
           {bottomText}
