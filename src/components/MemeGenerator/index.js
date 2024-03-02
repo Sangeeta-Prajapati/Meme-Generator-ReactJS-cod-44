@@ -100,12 +100,12 @@ class MemeGenerator extends Component {
 
     return (
       <MemeGeneratorForm onSubmit={this.onGenerateMeme}>
-        <CustomLabel htmlFor="backgroundImgUrl" data-testid="meme">
+        <CustomLabel htmlFor="Image URL" data-testid="meme">
           Image URL
         </CustomLabel>
         <CustomInput
           type="text"
-          id="backgroundImgUrl"
+          id="Image URL"
           value={backgroundImgUrlInput}
           onChange={this.onChangeBackgroundImage}
           placeholder="Enter the Image URL"
@@ -120,7 +120,7 @@ class MemeGenerator extends Component {
           placeholder="Enter the Top Text"
         />
 
-        <CustomLabel htmlFor="backgroundImgUrl">Bottom Text</CustomLabel>
+        <CustomLabel htmlFor="bottomText">Bottom Text</CustomLabel>
         <CustomInput
           type="text"
           id="bottomText"
